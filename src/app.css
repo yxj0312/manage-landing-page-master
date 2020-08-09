@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none;
+}
+
 :root {
     --bright-red: hsl(12, 88%, 59%);
     --dark-blue: hsl(228, 39%, 23%);
@@ -9,52 +16,96 @@
 
 html,
 body {
-    height: 100%;
+    height: 100%;  
+}
+
+.page {
     font-size: 16px;
     font-family: 'Be Vietnam', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    outline: none;
-}
-
-.page {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-.container {
-    padding: 0 24px;
-}
-
 .page-header {
     position: relative;
-    background: var(--very-light-gray);
     z-index: 10;
 }
 
-.header-background {
-    position: absolute;
-    top: 0;
+.wrapper {
+    padding: 0 24px;
+    text-align: center;
 }
 
-.header-nav {
-    margin: 24px 0;
+.wrapper.header-nav {
+    padding-top: 22px;
+    padding-bottom: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
-.header-nav-list {
-    font-size: 0.875rem;
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list.header-nav__list {
+    display: flex;
+    margin-left: 53px;
+}
+
+.header-nav__item {
+    font-size: 1.1875rem;
     letter-spacing: -.5px;
     margin-bottom: 23px;
     position: relative;
     z-index: 2;
+}
+
+.header-nav__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--very-dark-blue);
+}
+
+@media only screen and (min-width: 900px) {
+    .page {
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 165px;
+        text-align: left;
+    }
+
+    .wrapper.header-nav {
+        text-align: center;
+    }
+
+    .header-nav__item {
+        font-size: .9375rem;
+        letter-spacing: -.6px;
+        margin: 0 30px 0 0;
+        position: relative;
+    }
+
+    .header-nav__item:hover .header-nav__link {
+        color: var(--dark-grayish-blue)
+    }
+
+    .header-nav__item:hover::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+        bottom: -32px;
+        left: 0;
+        background: linear-gradient(to right, var(--dark-blue), var(--bright-red));
+        color: var(--dark-blue);
+    }
 }
