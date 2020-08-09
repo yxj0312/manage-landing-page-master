@@ -12,6 +12,8 @@ body {
     height: 100%;
     font-size: 16px;
     font-family: 'Be Vietnam', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 *,
@@ -21,7 +23,38 @@ body {
     outline: none;
 }
 
-.container {
+.page {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.container {
+    padding: 0 24px;
+}
+
+.page-header {
+    position: relative;
+    background: var(--very-light-gray);
+    z-index: 10;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+}
+
+.header-nav {
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-nav-list {
+    font-size: 0.875rem;
+    letter-spacing: -.5px;
+    margin-bottom: 23px;
+    position: relative;
+    z-index: 2;
 }
