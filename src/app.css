@@ -70,6 +70,25 @@ body {
     color: var(--very-dark-blue);
 }
 
+.button {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .9375rem;
+    font-weight: 600;
+    letter-spacing: -.25px;
+    padding: 14px 33px;
+    color: #fff;
+    background: var(--bright-red);
+    border-radius: 50px;
+    position: relative;
+}
+
+.button:hover {
+    opacity: 0.5;
+}
+
+
 @media only screen and (min-width: 900px) {
     .page {
         position: relative;
