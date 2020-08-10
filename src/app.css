@@ -127,4 +127,20 @@ body {
         background: linear-gradient(to right, var(--dark-blue), var(--bright-red));
         color: var(--dark-blue);
     }
+
+    .wrapper.page-content__hero {
+        flex-direction: row;
+        justify-content: initial;
+        align-items: flex-start;
+        padding-bottom: 169px;
+    }
+
+    .wrapper.page-content__hero::before {
+        background: url('../images/bg-intro-desktop.svg') no-repeat;
+        background-size: 100%;
+        width: 88.2%;
+        height: 917px;
+        top: -259px;
+        right: -456px;
+    }
 }
