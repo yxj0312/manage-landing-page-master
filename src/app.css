@@ -120,6 +120,14 @@ body {
     margin-top: -121px;
 }
 
+.img--said-card {
+    position: absolute;
+    width: 20%;
+    top: -40px;
+    right: 40%;
+    
+}
+
 .hero__title {
     font-weight: 600;
     color: var(--dark-blue);
@@ -131,7 +139,15 @@ body {
     max-width: 600px;
 }
 
+.said__card {
+    position: relative;
+    background-color: var(--very-light-gray);
+}
 
+.said__title {
+   font-size: 1.9375rem;
+   text-align: center; 
+}
 
 @media only screen and (min-width: 900px) {
     .page {
@@ -214,5 +230,38 @@ body {
         line-height: 1.55;
         margin: 24px 0 35px 0;
         width: 63%;
+    }
+
+    .group.said__group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 72px;
+        text-align: center;
+    }
+
+    .said__card,
+    .card._choose:first-of-type {
+        margin: 0;
+        flex: 0 1 355px;
+    }
+
+    .said__card-title {
+        font-size: 1.5rem;
+        letter-spacing: -.4px;
+        margin-top: 35px;
+    }
+
+    .said__card-copy {
+        font-size: 1.0625rem;
+        letter-spacing: -.77px;
+        line-height: 1.55;
+        width: 88%;
+        margin-top: 26px;
+    }
+
+    .said__button {
+        margin-top: 72px;
+        text-align: center;
     }
 }
